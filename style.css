@@ -15,23 +15,8 @@ body {
   color: #11284b;
 }
 main {
-  width: 1600px;
+  width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-header {
-  grid-area: header;
-}
-aside {
-  grid-area: aside;
-}
-main {
-  grid-area: main;
-}
-footer {
-  grid-area: footer;
 }
 h1 {
   font-size: 3rem;
@@ -39,14 +24,12 @@ h1 {
   letter-spacing: -0.01em;
   line-height: 1.1;
 }
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    "header header header header header"
-    "aside main main main main"
-    "footer footer footer footer footer";
-  gap: 10px;
+.wrapper {
+  width: 1200px;
+  display: flex;
+  justify-content: center;
 }
+
 nav {
   background-color: #f6f6eb;
 }
@@ -58,7 +41,7 @@ nav ul {
   padding: 1rem;
 }
 nav ul li {
-  width: 5rem;
+  padding: 0 0.5rem;
 }
 nav ul li a {
   color: #381fd1;
@@ -80,19 +63,29 @@ aside input {
 }
 .flex-box {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 4rem;
-  margin-bottom: 0.5rem;
+  flex-direction: column;
+  align-content: flex-start;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+.flex-box a {
+  align-self: flex-end;
+  margin-right: 2rem;
 }
 
 .library-container {
   width: 100%;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.library {
+  margin-left: 3rem;
+  width: 100%;
   column-gap: 32px;
   display: grid;
   grid-auto-rows: 1fr;
-  grid-template-columns: repeat(auto-fill, 261px);
+  grid-template-columns: repeat(auto-fill, 250px);
   row-gap: 32px;
 }
 .library-item {
@@ -135,14 +128,19 @@ aside ul li a {
 aside ul li a:hover {
   color: #381fd1;
 }
-.container {
-  margin: 100px;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: rgb(23, 23, 209);
-  color: white;
+footer {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: space-around;
+  margin-top: 5rem;
+  padding: 5rem;
+  background-color: #10284b;
+  color: #fff;
 }
-
+footer div {
+  margin-right: 2rem;
+}
 .title {
   display: flex;
 }
