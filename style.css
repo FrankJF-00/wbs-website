@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  width: 1200px;
+}
+header {
+  grid-area: header;
+}
+aside {
+  grid-area: aside;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "aside main main main main main"
+    "footer footer footer footer footer footer";
+  gap: 10px;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.library-container {
+  column-gap: 32px;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fill, 261px);
+  row-gap: 32px;
+}
+.library-item {
+  border: #4b4b4e 0.1rem solid;
+}
+.library-thumbnail {
+  height: 40px;
+  width: 40px;
+}
+
+#lowerMain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.lowerMainBox {
+  border-radius: 10px;
+  text-wrap: wrap;
+}
+
+#lowerMainBox1 {
+  background-image: url("https://res.cloudinary.com/stark-lab/image/upload/v1653845742/library_collection_Collection_Boundless_Disability_Employment_c297d236d9.png");
+}
+#lowerMainBox2 {
+  background-image: url("https://res.cloudinary.com/stark-lab/image/upload/v1653845743/library_collection_making_accessible_color_combos_42c8d90a99.png");
+}
+#lowerMainBox3 {
+  background-image: url("https://res.cloudinary.com/stark-lab/image/upload/v1653845743/library_collection_Inclusive_Social_Media_b9669e6d39.png");
+}
