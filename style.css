@@ -3,8 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: ArminGrotesk, ArminGroteskBlack, ArminGroteskSemiBold, sans-serif;
+  background-color: #fff;
+  color: #11284b;
+}
 main {
-  width: 1200px;
+  width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 header {
   grid-area: header;
@@ -18,22 +33,62 @@ main {
 footer {
   grid-area: footer;
 }
-
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header header header header header header"
-    "aside main main main main main"
-    "footer footer footer footer footer footer";
+    "header header header header header"
+    "aside main main main main"
+    "footer footer footer footer footer";
   gap: 10px;
 }
-
+nav {
+  background-color: #f6f6eb;
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+}
+nav ul li {
+  width: 5rem;
+}
+nav ul li a {
+  color: #381fd1;
+}
+aside {
+  min-width: 280px;
+  width: 280px;
+  padding-top: 4rem;
+}
+aside ul li {
+  padding: 16px 0 16px 1.25rem;
+}
+aside input {
+  width: 100%;
+  padding: 0.5rem;
+  color: #9ca3af;
+  border: #9ca3af 0.15rem solid;
+  border-radius: 0.25rem;
+}
 .flex-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
 }
+
 .library-container {
+  width: 100%;
   column-gap: 32px;
   display: grid;
   grid-auto-rows: 1fr;
@@ -42,29 +97,54 @@ footer {
 }
 .library-item {
   border: #4b4b4e 0.1rem solid;
+  padding: 1.5rem 2.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+.library-item h3 {
+  color: #11284b;
 }
 .library-thumbnail {
   height: 40px;
   width: 40px;
 }
-
+.contribute {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f3f2fc;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  color: #11284b;
+}
+.contribute button {
+  background-color: #381fd1;
+  border: none;
+  min-height: 44px;
+  color: #fff;
+}
+.contribute h3,
+.contribute p {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+aside ul li a {
+  color: #11284b;
+}
+aside ul li a:hover {
+  color: #381fd1;
+}
 .container {
-  
-  margin:100px;
+  margin: 100px;
   padding: 0;
   box-sizing: border-box;
   background-color: rgb(23, 23, 209);
-  color : white;
+  color: white;
+}
 
-  
-}
-.body {
-  
-  justify-content: space-between;
-  align-items:center;
-}
-.title{
-  display:flex;
+.title {
+  display: flex;
 }
 
 #lowerMain {
@@ -80,7 +160,6 @@ footer {
   border-radius: 10px;
   text-wrap: wrap;
 }
-
 #lowerMainBox1 {
   background-image: url("https://res.cloudinary.com/stark-lab/image/upload/v1653845742/library_collection_Collection_Boundless_Disability_Employment_c297d236d9.png");
 }
@@ -90,4 +169,3 @@ footer {
 #lowerMainBox3 {
   background-image: url("https://res.cloudinary.com/stark-lab/image/upload/v1653845743/library_collection_Inclusive_Social_Media_b9669e6d39.png");
 }
-
